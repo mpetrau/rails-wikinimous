@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark">
+      <%= link_to raw('<i class="fa fa-gavel" aria-hidden="true"></i>
+Wikinimuos!'), '/', class: "navbar-brand" %>
+  <%= link_to "Submit article", new_article_path, class: "btn btn-primary mx-auto"  %>
+    </nav>
+    <!-- Body -->
     <%= yield %>
   </body>
 </html>
