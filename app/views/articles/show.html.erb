@@ -6,6 +6,6 @@
     <li class="list-inline-item mx-3"><%= link_to raw('<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 Edit'), edit_article_path(@article) %></li>
     <li class="list-inline-item mx-3"><%= link_to raw('<i class="fa fa-trash-o" aria-hidden="true"></i>
-Remove'), edit_article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></li>
+Remove'), article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %></li>
   </ul>
 </div>

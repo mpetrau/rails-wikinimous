@@ -1,0 +1,6 @@
+  <%= simple_form_for @article do |f| %>
+    <%= f.input :title, label_html: { class: 'sr-only' }, placeholder: 'Article title', required: true %>
+    <%= f.input :content, label_html: { class: 'sr-only' }, placeholder: 'Content goes here...', required: true, input_html: {style: "height: 300px;"} %>
+    <%= f.submit "Post!", class: "btn btn-primary w-100" %>
+  <% end %>
+

@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.all
+    @articles = Article.all.order(created_at: :desc)
   end
 
   def show
@@ -13,8 +13,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article.create(article_params)
-    redirect_to articles_path
+    @article = Article.create(article_params)
+    redirect_to article_path(@article)
   end
 
   def edit
