@@ -1,7 +1,7 @@
 <div class="container px-sm-5">
   <h1 class="text-center text-dark my-5"><%= @article.title %></h1>
   <p class="font-weight-light text_secondary mb-3"><%= @article.created_at.strftime("Created on %m/%d/%Y at %I:%M%p") %></p>
-  <p class="text-dark"><%= @article.content %></p>
+  <p class="text-dark"><%= Kramdown::Document.new(@article.content).to_html.html_safe %></p>
   <ul class="list-inline">
     <li class="list-inline-item mx-3"><%= link_to raw('<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
 Edit'), edit_article_path(@article) %></li>
